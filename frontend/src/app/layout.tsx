@@ -16,7 +16,16 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <main>
+          <div className="max-w-2xl mx-auto mt-8">
+            <h1 className="text-balance scroll-m-20 text-2xl mb-6 font-semibold tracking-tight">
+              Integrating Next.js with a backend server using an auth provider
+            </h1>
+            {children}
+          </div>
+        </main>
+      </body>
     </html>
   );
 }

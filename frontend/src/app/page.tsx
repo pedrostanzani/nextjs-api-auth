@@ -1,13 +1,12 @@
-import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
-    <main>
-      <div className="max-w-2xl mx-auto mt-8">
-        <h1 className="text-balance scroll-m-20 text-2xl font-semibold tracking-tight">
-          Integrating Next.js with a backend server using an auth provider
-        </h1>
-      </div>
-    </main>
+    <div className="space-y-2">
+      <p>Home page [public].</p>
+      <p>
+        Go <Link className="text-blue-600 hover:underline" href="/private">private</Link>.
+      </p>
+    </div>
   );
 }
