@@ -5,7 +5,7 @@ import { errorHandler, unknownEndpoint } from "@/lib/middleware";
 import ExampleController from "@/controllers/example";
 
 function registerRoutes(app: Application) {
-  app.use("/", ExampleController);
+  app.use("/api", ExampleController);
 }
 
 function register(app: Application) {
