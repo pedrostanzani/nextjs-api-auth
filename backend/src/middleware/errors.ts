@@ -5,6 +5,10 @@ const unknownEndpoint = (req: Request, res: Response) => {
 };
 
 const errorHandler: ErrorRequestHandler = (err, req, res, next) => {
+  if (err.name === "UnauthorizedError") {
+    return res.status(422).end();
+  }
+
   console.error(err);
 
   return res
